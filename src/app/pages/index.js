@@ -25,7 +25,7 @@ export default function Exame() {
     setMessage('');
 
     try {
-      const response = await axios.post('https://agendamento-backend-xoup.onrender.com/api/agendamentos', formData);
+      const response = await axios.post('https://agendamento-backend-xoup.onrender.com/api/agendamento', formData);
       setMessage(response.data.message);
     } catch (error) {
       setMessage(error.response ? error.response.data.error : 'Erro desconhecido');
